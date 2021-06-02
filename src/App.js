@@ -1,15 +1,17 @@
 
 
 function App() {
-  return <div>
+  return (
+  <div>
     <h1>My Todos</h1>
-    <div>
+    <div className='card'>
       <h2>Title</h2>
-      <div>
-        <button>Delete</button>
+      <div className='actions'>
+        <button className='btn'>Delete</button>
       </div>
     </div>
-  </div>;
+  </div>
+  );
 }
 
 export default App;
