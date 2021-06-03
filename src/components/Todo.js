@@ -10,7 +10,10 @@ function deleteHandler(){
     setModalIsOpen(true);
 // console.log('clicked');
 // console.log(props.text);
+}
 
+function closeModalHandler(){
+    setModalIsOpen(false);
 }
 
     return (
@@ -19,8 +22,8 @@ function deleteHandler(){
         <div className='actions'>
             <button className='btn' onClick={deleteHandler}>Delete</button>
         </div>
-        {modalIsOpen && <Modal/>}
-        {modalIsOpen && <Backdrop/>}
+        {modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
+        {modalIsOpen && <Backdrop onCancel={closeModalHandler}/> }
         
         {/* <Backdrop/> */}
     </div>
